@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://unpkg.com/vue@next"></script>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+	<div id="app" class="container">
+		<div class="row mt-5">
+			<div class="col-2 card p-2">
+				<h3 class="text-center"> {{ counter }}</h3>
+				<div class="d-flex justify-content-center align-items-center">
+					<button @click="counter++" class="btn me-2 btn-sm btn-primary">+</button>
+					<button @click="counter--" class="btn btn-sm btn-danger">-</button>
+				</div>
+				<div class="alert alert-warning mt-2" id="durum">
+					{{ getCounterResult }} </div>
+			</div>
+			<div class="col-2 card p-2">
+				<h3 class="text-center"> {{ counter2 }}</h3>
+				<div class="d-flex justify-content-center align-items-center">
+					<button @click="counter2++" class="btn me-2 btn-sm btn-primary">+</button>
+					<button @click="counter2--" class="btn btn-sm btn-danger">-</button>
+				</div>
+				<div class="alert alert-warning mt-2" id="durum">
+					{{ getCounter2Result }} </div>
+			</div>
+			<br>
+			<br>
+			<div class="col-4 card p-3">
+				<h1>{{ title }}</h1>
+				<p>{{ description }}</p>
+				<button @click="liked++">{{ liked }}</button>
+			</div>
+		</div><!-- .row.mt-5-->
+	</div> <!-- .container -->
+	<script src="app.js"></script>
+</body>
+
+</html>
