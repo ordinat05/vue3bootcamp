@@ -629,3 +629,42 @@ body #app small {
   font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
+
+.boxShadow1 {
+  height: 120px;
+  width: 200px;
+  background-color: #aebc1c;
+}
+.boxShadow2 {
+  border-radius: 4px 12px;
+  box-shadow: 7px 9px 6px orange, 9px 12px 8px blue;
+  text-align: center;
+  padding: 1.5em;
+}
+.textShadow1 {
+  color: #ffffff;
+  background: #232323;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+.textShadow2 {
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.textShadow3 {
+  text-shadow: 2px 1px 1px #7a7a7a, 3px 2px 2px rgba(45, 206, 55, 0.97);
+}
+.textShadow4 {
+  color: #ffffff;
+  background: #912c22;
+  text-shadow: 0.5px 0.5px 0.5px #49ff18, 1px 1px 1px #000000;
+}
+
+.textBorder1 {
+  -webkit-text-stroke: 0.2px black;
+  -webkit-text-fill-color: greenyellow;
+}

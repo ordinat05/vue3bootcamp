@@ -37,13 +37,12 @@ const app = Vue.createApp({
     // counter() {
     //   console.log("Counter Watcher Çalıştı.");
     // },
-    counter(newValue, oldValue) {
-      console.log("Counter Watcher Çalıştı.", newValue, oldValue);
-    },
-    getResult(newValue, oldValue) {
-      // console.log(`getResult Watcher : Result ${oldValue} => ${newValue}`);
-      console.log(`Fark :  ${oldValue} - ${newValue} = `);
-    },
+    // counter(newValue, oldValue) {
+    //   console.log("Counter Watcher Çalıştı.", newValue, oldValue);
+    // },
+    // getResult(newValue, oldValue) {
+    //   console.log(`getResult Watcher : Result ${oldValue} => ${newValue}`);
+    // },
     // itemList(itemList) {
     //   console.log("itemList : >>", itemList);
     // },
