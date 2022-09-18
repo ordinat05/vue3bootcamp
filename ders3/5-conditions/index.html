@@ -16,9 +16,48 @@
 
 <body>
 	<div id="app">
-		<div class="container">
-			<h3 class="text-red">test</h3>
+		<div class="container text-center">
+			<div class="bg-info sebomMr-2"> v-if, v-else = 2 ihtimalli</div>
+			<div class="bg-info sebomMr-2"> Elementi DOM dan siler</div>
+			<button @click="showState = !showState">Göster / Gizle</button>
+			{{showState}}
+			<!-- <h3 v-if="showState" class="sebombg-green">Gösterilecek Başlık</h3>
+				<h3 v-if="!showState" class="sebombg-red">Gizlenen Başlık</h3> -->
+			<h3 v-if="showState" class="sebombg-green">Gösterilecek Başlık</h3>
+			<h3 v-else class="sebombg-red">Gizlenen Başlık</h3>
 		</div>
+		<div class="container text-center">
+			<div class="bg-info sebomMr-2"> v-show + koşul = 2 ihtimalli</div>
+			<div class="bg-info sebomMr-2"> Elementi DOM dan silmez</div>
+			<button @click="showState2 = !showState2">Göster / Gizle</button>
+			{{showState2}}
+			<h3 v-show="showState2" class="sebombg-green">Gösterilecek Başlık</h3>
+			<h3 v-show="!showState2" class="sebombg-red">Gizlenen Başlık</h3>
+		</div>
+		<br>
+		<br>
+		<div class="container text-center">
+			<div class="bg-info sebomMr-2"> v-if, v-else-if, v-else = 3 ihtimalli</div>
+			<button @click="inc" class="sebombg-green sebomMr-2">+</button>
+			<button @click="dec" class="sebombg-red sebomMr-2">-</button> {{counter}}
+			<div>
+				<h3 v-if="counter < 0" class="sebombg-red">Negatif</h3>
+				<h3 v-else-if="counter > 0" class="sebombg-green">Pozitif</h3>
+				<h3 v-else class="border">Sıfır</h3>
+			</div>
+		</div>
+		<!-- <div class="container text-center">
+			<div class="bg-info sebomMr-2"> v-show & koşul </div>
+			<button @click="inc2" class="sebombg-green sebomMr-2">Arttır</button>
+			<button @click="dec2" class="sebombg-red sebomMr-2">Azalt</button> {{counter2}}
+			<div>
+				<h3 v-if="counter2 < 0" class="sebombg-red">Negatif</h3>
+				<h3 v-else-if="counter2 > 0" class="sebombg-green">Pozitif</h3>
+				<h3 v-else class="border">Sıfır</h3>
+			</div>
+		</div> -->
+
+
 	</div>
 	<script src="app.js"></script>
 </body>

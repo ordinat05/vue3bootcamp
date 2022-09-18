@@ -668,3 +668,30 @@ body #app small {
   -webkit-text-stroke: 0.2px black;
   -webkit-text-fill-color: greenyellow;
 }
+
+.sebombg-green {
+  color: #ffffff;
+  background: rgba(0, 200, 83, 1) !important;
+  border-radius: 4px 4px 8px 8px;
+}
+.sebombg-green:hover {
+  background: rgba(0, 200, 83, 0.5) !important;
+}
+.sebombg-green:active {
+  background: rgba(255, 255, 255, 1) !important;
+}
+.sebombg-red {
+  color: #ffffff;
+  background: rgba(255, 61, 0, 1) !important;
+  border-radius: 8px 8px 4px 4px;
+}
+.sebombg-red:hover {
+  background: rgba(255, 61, 0, 0.5) !important;
+}
+.sebombg-red:active {
+  background: rgba(255, 255, 255, 1) !important;
+}
+.sebomMr-2 {
+  margin: 2px !important;
+  /* padding: 2px !important; */
+}

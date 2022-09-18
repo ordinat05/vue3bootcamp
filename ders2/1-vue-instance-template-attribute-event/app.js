@@ -43,7 +43,8 @@ const app = Vue.createApp({
     // 🔻 EVENT + ARGUMAN
     updateValue(customText, e) {
       console.log(customText, e);
-      this.fullName = e.target.value;
+      // this.fullName = e.target.value;
+      this.name = e.target.value;
     },
   },
   computed: {},

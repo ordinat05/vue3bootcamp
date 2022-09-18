@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Ödev 1 | Template üzerine Veri Yazdırmak</title>
+	<script src="https://unpkg.com/vue@next"></script>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header>Ödev 1 | Template Üzerine Veri Yazdırmak</header>
+
+	<div id="exercise" class="container">
+		<div class="card">
+			<!-- 1) Interpolation yani {{}} Syntax'ını kullanarak <p> elementinin içeriğini Name ve Age verileriyle doldurun-->
+			<p>VueJS Muazzam bir Framework - {{ name }} ({{ age }})</p>
+			<!-- 2) Yaşınızı 5 ile çarpıp <p> içerisinde yazdırınız -->
+			<p class="mt-10">{{ age * 5 }}</p>
+
+			<!-- 3) Fonksiyon çağırarak 0 ile 1 arasında bir sayı üretip <p> içerisinde yazdırınız (Math.random()) -->
+			<button @click="getRandom();"> Sayı üret</button>
+			<p class="mt-10"> {{ getRandomSayi }} = Random sayı 1 ile 100 arasında</p>
+
+			<!-- 4) Google üzerinden bulacağınız herhangi bir fotoğrafı <img> elementinde gösterme işlemini yapınızı. Bunu yaparken "src" attribute' una bind etmeyi unutmayınız -->
+			<!-- <img width="300" :src="imageUrl" alt="" /> -->
+			<img width="300" :src="imageUrl2" alt="" />
+
+			<!-- 5) Name değişkeninin değerinin <input /> içine yazdığınız değer ile anlık olarak değiştirilmesini sağlayınız. ("value" attribute kullanarak) -->
+			<div class="mt-10">
+				<!-- <input type="text" :value="name" @input="name = $event.target.value" /> -->
+				<!-- ⭐🏮🏮🏮  Anladım : inputun $event.target.value sinden alınan değeri ⏩ Name e atama yap. -->
+				<!-- <input type="text" :value="name" @input="name" @keydown.enter="addTodo" /> -->
+				<input type="text" v-model="name" @keydown="addTodo" />
+				<!-- 🏮 Aslında olayı bitiren v-model oldu fonksiyone ve event göndermeye gerek kalmadı.  -->
+				<!-- <input type="text" v-model="name" /> -->
+
+				<!-- inputta yazan değeri Fonksiyona gönderemedim. 🔑🔑🔑  -->
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+
+</html>
