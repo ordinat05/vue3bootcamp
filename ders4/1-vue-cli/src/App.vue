@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+  <appHeader />
+  <!-- <appHeader></appHeader> -->
 
+  <div>
+    <h3>Bu benim ilk VUE CLI Uygulamam</h3>
+    <p>Bugün Component ve Vue CLI</p>
+  </div>
+  <!-- <CounterItem></CounterItem> -->
+  <CounterItem />
+  <Counter-Item />
+</template>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CounterItem from "@/components/CounterItem";
+// import appHeader from "@/components/appHeader";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    CounterItem,
+    // appHeader,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
