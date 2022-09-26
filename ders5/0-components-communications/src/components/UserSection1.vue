@@ -1,7 +1,11 @@
 <template>
-  <ListSection1 :userList="userList" />
+  <h3 style="width: 100%; background-color: blue">
+    Versiyon 1 (emit ve custom Event yöntemi)
+  </h3>
+
   <AddSection1 @new-item="$emit('new-item', $event)" />
   <!-- @new-item="userList.push($event)" -->
+  <ListSection1 :userList="userList" />
 </template>
 
 <script>

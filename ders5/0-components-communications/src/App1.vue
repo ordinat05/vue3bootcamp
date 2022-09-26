@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <!-- <h3>Bu benim container ım</h3>
-     -->
     <UserSection1 :userList="userList" @new-item="userList.push($event)" />
   </div>
 </template>
@@ -15,7 +13,6 @@ export default {
   data() {
     return {
       userList: ["Tayfun", "Gökhan", "Defne", "Handan", "Aslı"],
-      // emits: ["new-item"],
     };
   },
 };

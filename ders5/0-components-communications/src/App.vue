@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-    <UserSection @new-item="userList.push($event)" />
+    <UserSection2 />
   </div>
 </template>
 
 <script>
-import UserSection from "@/components/UserSection.vue";
+import UserSection2 from "@/components/UserSection2.vue";
 export default {
   components: {
-    UserSection,
+    UserSection2,
   },
   data() {
     return {
@@ -17,9 +17,15 @@ export default {
       },
     };
   },
+  methods: {
+    newItem(item) {
+      this.provideData.userList.push(item);
+    },
+  },
   provide() {
     return {
       userList: this.provideData.userList,
+      newItem: this.newItem,
     };
   },
 };
