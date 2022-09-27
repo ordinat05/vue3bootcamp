@@ -1,29 +1,37 @@
 <template>
   <div class="container">
-    <button @click="activeComponent = 'RedComp'">Red Comp</button>
-    <button @click="activeComponent = 'GreenComp'">Green Comp</button>
-    <button @click="activeComponent = 'BlueComp'">Blue Comp</button>
-    <RedComp v-if="activeComponent == 'RedComp'" class="mb-2" />
-    <GreenComp v-if="activeComponent == 'GreenComp'" class="mb-2" />
-    <BlueComp v-if="activeComponent == 'BlueComp'" class="mb-2" />
+    <div class="class d-flex justify-content-between align-items-center">
+      <button class="red" @click="activeComponent = 'RedComp1'">
+        Red Comp
+      </button>
+      <button class="green" @click="activeComponent = 'GreenComp1'">
+        Green Comp
+      </button>
+      <button class="blue" @click="activeComponent = 'BlueComp1'">
+        Blue Comp
+      </button>
+    </div>
+    <RedComp1 v-if="activeComponent == 'RedComp1'" class="mb-2" />
+    <GreenComp1 v-if="activeComponent == 'GreenComp1'" class="mb-2" />
+    <BlueComp1 v-if="activeComponent == 'BlueComp1'" class="mb-2" />
   </div>
 </template>
 
 <script>
-import RedComp from "@/components/RedComp.vue";
-import GreenComp from "@/components/GreenComp.vue";
-import BlueComp from "@/components/BlueComp.vue";
+import RedComp1 from "@/components/RedComp1.vue";
+import GreenComp1 from "@/components/GreenComp1.vue";
+import BlueComp1 from "@/components/BlueComp1.vue";
 
 export default {
   name: "App",
   components: {
-    RedComp,
-    GreenComp,
-    BlueComp,
+    RedComp1,
+    GreenComp1,
+    BlueComp1,
   },
   data() {
     return {
-      activeComponent: "RedComp",
+      activeComponent: "RedComp1",
     };
   },
 };
