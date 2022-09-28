@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "elma",
+      "created_at": "2022-09-28T02:34:18.992Z",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "armut",
+      "created_at": "2022-09-28T02:34:21.616Z",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "title": "karpuz",
+      "created_at": "2022-09-28T02:34:28.472Z",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "kavun",
+      "created_at": "2022-09-28T03:00:03.730Z",
+      "completed": false,
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
