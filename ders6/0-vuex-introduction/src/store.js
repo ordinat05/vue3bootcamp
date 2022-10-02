@@ -25,6 +25,8 @@ const store = createStore({
     itemList: [
       { id: 1, title: "Masa", type: "mobilya" },
       { id: 2, title: "Sandalye", type: "mobilya" },
+      // { id: 6, title: "ddd", type: "mobilya" },
+      // { id: 7, title: "eeee", type: "mobilya" },
       { id: 3, title: "TV", type: "elektronik" },
       { id: 4, title: "Monitor", type: "elektronik" },
       { id: 5, title: "Bardak", type: "plastik" },
