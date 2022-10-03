@@ -32,6 +32,36 @@ const store = createStore({
       { id: 5, title: "Bardak", type: "plastik" },
     ],
   },
+  mutations: {
+    newItem(state, item) {
+      state.itemList.push(item);
+    },
+  },
+  // actions: {
+  //   newItem(context, item) {
+  //     console.log("item :>>", item);
+  //     setTimeout(() => {
+  //       // context.state  STATE deki bir bilgiye erişebilirim.
+  //       // context.dispatch Başka bir Action mu çalıştıracağım.
+  //       // context.commit Mutation a göndereceğim.
+  //       context.commit("newItem", item);
+  //     }, 1000);
+  //   },
+  // },
+  // 🔺 1. Yöntem 🏮🏮🏮Context den commit i kullanmak veya state, dispatch, commit seçmek
+  actions: {
+    newItem({ commit }, item) {
+      console.log("item :>>", item);
+      setTimeout(() => {
+        // context.state  STATE deki bir bilgiye erişebilirim.
+        // context.dispatch Başka bir Action mu çalıştıracağım.
+        // context.commit Mutation a göndereceğim.
+        commit("newItem", item);
+      }, 1000);
+    },
+  },
+  // 🔺 2. Yöntem 🏮🏮🏮Contextdeki sadece commiti kullanmak. Yalnız yazılıyorken {commit} bir obje olduğu için {} arasında yazılıyor . Unutma.
+
   getters: {
     woodItems: (state) => state.itemList.filter((i) => i.type == "mobilya"),
     electronical: (state) =>
