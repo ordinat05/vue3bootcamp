@@ -1,0 +1,22 @@
+{
+  "bookmarks": [
+    {
+      "title": "yandex",
+      "url": "https://yandex.com.tr",
+      "description": "xxx",
+      "id": 2
+    },
+    {
+      "title": "facebook",
+      "url": "https://facebook.com",
+      "description": "ccc",
+      "id": 3
+    },
+    {
+      "title": "google",
+      "url": "https://google.com.tr",
+      "description": "ggg",
+      "id": 4
+    }
+  ]
+}
