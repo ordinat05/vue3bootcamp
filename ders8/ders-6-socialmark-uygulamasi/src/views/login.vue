@@ -1,6 +1,7 @@
 <template>
   <h1>LoginComp</h1>
   <div class="login_register_container">
+    {{ this.$store.getters._saltKey }}
     <h3 class="text-2xl text-center mb-3">Giriş Yap</h3>
     <input v-model="userData.username" type="text" placeholder="Kullanıcı Adı" class="input mb-3" />
     <input v-model="userData.password" type="password" placeholder="Şifre" class="input mb-3" />
@@ -13,6 +14,7 @@
   </div>
 </template>
 <script>
+import CryptoJS from "crypto-js";
 export default {
   data() {
     return {
@@ -24,7 +26,28 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$appAxios.get(`/users?username={this.userData.username}&password=${password}`);
+      const password = this.userData.password;
+      console.log("password : >> ", password);
+      // const cryptedPassword = CryptoJS.AES.encrypt(password, key);
+      // 🔻 Aşağıdaki farklı farklı password lar üretiyor.
+      // const cryptedPassword = CryptoJS.AES.encrypt(password, this.$store.getters._saltKey).toString();
+      // 🔻 Buna çeviriyoruz aynı password u üretiyor.
+      const cryptedPassword = CryptoJS.HmacSHA1(password, this.$store.getters._saltKey).toString();
+      console.log("Hashlenmiş şifre-->", cryptedPassword);
+
+      this.$appAxios
+        .get(`/users?username=${this.userData.username}&password=${password}`)
+        .then((login_response) => {
+          // console.log(login_response);
+          if (login_response?.data?.length > 0) {
+            this.$store.commit("setUser", login_response?.data[0]);
+            this.$router.push({ name: "HomePage" });
+          } else {
+            alert("Böyle bir kullancı bulunamadı...");
+          }
+        })
+        .catch((e) => console.log(e));
+      // .finally(() => (this.loader = false))
     },
   },
 };

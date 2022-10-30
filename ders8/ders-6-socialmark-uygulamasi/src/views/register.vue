@@ -33,9 +33,9 @@ export default {
     onSave() {
       // console.log("BakBakalım SAVE-->", this.userData);
       const password = this.userData.password;
-      const key = "hashlemekicintext";
+      // const key = "hashlemekicintext";
       // const cryptedPassword = CryptoJS.AES.encrypt(password, key);
-      const cryptedPassword = CryptoJS.AES.encrypt(password, key).toString();
+      const cryptedPassword = CryptoJS.HmacSHA1(password, this.$store.getters._saltKey).toString();
       console.log("Hashlenmiş şifre-->", cryptedPassword);
       // 🔻 START aşağıdaki ise şifreyi çözümlemeye yarıyor.
       // const decryptedPassword = CryptoJS.AES.decrypt(cryptedPassword, key).toString(CryptoJS.enc.Utf8);
